@@ -67,9 +67,14 @@ class Pest {
     }
   }
 
-  public function get($url, $params=array()) {
-    $params = (is_array($params)) ? http_build_query($params) : $params;
-    $url = $url.'?'.$params;
+  public function get($url, $data = array()) {
+    if(!empty($data)) {
+      $data = (is_array($data)) ? http_build_query($data) : $data;
+
+      //Allow adding params to any existing params
+      $sepchar = (strpos($url, '?') === false) ? '?' : '&';
+      $url .= $sepchar.$data;
+    }
 
     $curl = $this->prepRequest($this->curl_opts, $url);
     $body = $this->doRequest($curl);
