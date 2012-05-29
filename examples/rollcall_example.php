@@ -24,7 +24,7 @@ $data = array(
     'password' => "pinocchio",
     'display_name' => "Jiminy Cricket",
     'kind' => "Student"
-  ) 
+  )
 );
 
 $user = $pest->post('/users.xml', $data);
@@ -41,7 +41,7 @@ $data = array(
       'gender' => 'male',
       'age' => 30
     )
-  ) 
+  )
 );
 
 $pest->put('/users/'.$user->id.'.xml', $data);
@@ -67,7 +67,7 @@ $data = array(
     'password' => "pinocchio",
     'display_name' => "Jiminy Cricket",
     'kind' => "Student"
-  ) 
+  )
 );
 
 try {

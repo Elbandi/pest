@@ -28,7 +28,7 @@ class PestJSON extends Pest
   public function post($url, $data, $headers=array()) {
     return parent::post($url, json_encode($data), $headers);
   }
-  
+
   public function put($url, $data, $headers=array()) {
     return parent::put($url, json_encode($data), $headers);
   }
