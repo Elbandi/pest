@@ -1,0 +1,19 @@
+This package was debianized by Andras Elso <elso.andras@gmail.com>
+on Tue, 29 May 2012 18:02:01 +0200.
+
+It was downloaded from https://github.com/educoder/pest
+
+Upstream Author(s):
+
+    Matt Zukowski
+
+Copyright:
+
+    Copyright (C) 2011 by University of Toronto
+
+License:
+
+    MIT
+
+The Debian packaging is copyright 2012, Andras Elso <elso.andras@gmail.com> and
+is licensed under the GPL, see `/usr/share/common-licenses/GPL'.

@@ -1,0 +1,16 @@
+Source: php-pest
+Section: web
+Priority: optional
+Maintainer: Andras Elso <elso.andras@gmail.com>
+Build-Depends: debhelper (>= 7), cdbs
+Standards-Version: 3.8.1
+
+Package: php-pest
+Architecture: all
+Depends: 
+Description: Pest is a REST client for PHP
+ Pest is a PHP client library for RESTful web services.
+ .
+ Unlike Zend_Rest_Client, which is not really a "REST" client at all
+ (more like RPC-over-HTTP), Pest supports the four REST verbs
+ (GET/POST/PUT/DELETE) and pays attention to HTTP response status codes.

@@ -1,0 +1,3 @@
+version=3
+http://github.com/educoder/pest/downloads \
+  /educoder/pest/tarball/(.*) debian debian/orig-tar.sh

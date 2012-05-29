@@ -1,0 +1,63 @@
+Index: b/PestJSON.php
+===================================================================
+--- a/PestJSON.php
++++ b/PestJSON.php
+@@ -1,6 +1,6 @@
+ <?php
+ 
+-require_once 'Pest.php';
++require_once 'Pest/Pest.php';
+ 
+ /**
+  * Small Pest addition by Egbert Teeselink (http://www.github.com/eteeselink)
+Index: b/PestXML.php
+===================================================================
+--- a/PestXML.php
++++ b/PestXML.php
+@@ -1,6 +1,6 @@
+ <?php
+ 
+-require_once 'Pest.php';
++require_once 'Pest/Pest.php';
+ 
+ /**
+  * Pest is a REST client for PHP.
+Index: b/examples/intouch_example.php
+===================================================================
+--- a/examples/intouch_example.php
++++ b/examples/intouch_example.php
+@@ -19,7 +19,7 @@ $messagetext = "Hello! This message was sent by posting to the Intouch REST API.
+ $sendernumber = "IntouchAPI"; // Must be a valid sendernumber set up for your account
+ 
+  // Setting up Pest with URL for the Intouch API and basic HTTP authentication
+-require_once '../Pest.php';
++require_once 'Pest/Pest.php';
+ $pest = new Pest('http://intouchapi.pswin.com/1/');
+ $pest->setupAuth($user ."@". $logindomain, $password);
+ $pest->curl_opts[CURLOPT_FOLLOWLOCATION] = false; // Not supported on hosts running safe_mode!
+Index: b/examples/open_street_map_example.php
+===================================================================
+--- a/examples/open_street_map_example.php
++++ b/examples/open_street_map_example.php
+@@ -5,7 +5,7 @@
+  * (see http://wiki.openstreetmap.org/wiki/API_v0.6)
+  **/
+ 
+-require_once '../PestXML.php';
++require_once 'Pest/PestXML.php';
+ 
+ $pest = new PestXML('http://api.openstreetmap.org/api/0.6');
+ 
+Index: b/examples/rollcall_example.php
+===================================================================
+--- a/examples/rollcall_example.php
++++ b/examples/rollcall_example.php
+@@ -5,7 +5,7 @@
+  * (see https://github.com/educoder/rollcall)
+  **/
+ 
+-require_once '../PestXML.php';
++require_once 'Pest/PestXML.php';
+ 
+ $pest = new PestXML('http://localhost:3000');
+ 
