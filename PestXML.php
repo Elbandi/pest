@@ -25,7 +25,7 @@ class PestXML extends Pest {
     if (empty($body) || preg_match('/^\s+$/', $body))
       return null;
     
-    $xml = simplexml_load_string($body);
+    $xml = simplexml_load_string(trim($body));
     
     if (!$xml) {
       $err = "Couldn't parse XML response because:\n";
