@@ -67,7 +67,7 @@ class Pest {
     }
   }
 
-  public function get($url, $data = array()) {
+  public function get($url, $data = array(), $headers=array()) {
     if(!empty($data)) {
       $data = (is_array($data)) ? http_build_query($data) : $data;
 
@@ -76,6 +76,7 @@ class Pest {
       $url .= $sepchar.$data;
     }
 
+    foreach($headers as $headerName => $value) $this->addHeader($headerName, $value);
     $curl = $this->prepRequest($this->curl_opts, $url);
     $body = $this->doRequest($curl);
 
