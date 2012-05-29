@@ -17,5 +17,3 @@ $streets = $map->xpath('//way/tag[@k="name"]');
 foreach ($streets as $s) {
   echo $s['v'] . "\n";
 }
-
-?>

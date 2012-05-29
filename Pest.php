@@ -281,5 +281,3 @@ class Pest_UnknownResponse extends Pest_Exception { }
 /* 422 */ class Pest_InvalidRecord extends Pest_ClientError {}
 
 /* 500-599 */ class Pest_ServerError extends Pest_Exception {}
-
-?>

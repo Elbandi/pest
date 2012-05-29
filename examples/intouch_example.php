@@ -93,4 +93,3 @@ catch (Exception $e)
 {
     echo "<br>Caught exception when deleting contact : " .  $e->getMessage() . "<br>";
 }
-?>

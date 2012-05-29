@@ -62,5 +62,3 @@ class PestXML extends Pest {
 }
 
 class PestXML_Exception extends Pest_Exception { }
-
-?>
