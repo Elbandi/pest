@@ -1,3 +1,22 @@
+php-pest (0.1-2) unstable; urgency=low
+
+  [ Omar Gonzalez ]
+  * New addHeader() method added -Added an addHeader() method that lets
+    you add a header value to the Pest object before doing a get() for
+    example.
+  * Updated the addHeader() to use a try/catch block. The is_array()
+    line was crashing if CURLOPT_HTTPHEADER didn't exist. Using the
+    try/catch block fixed the error.
+
+  [ Munir Ahmad ]
+  * Added option to get params as array
+
+  [ Andras Elso ]
+  * Fix add get request params
+  * add headers parameter to get method
+
+ -- Andras Elso <elso.andras@gmail.com>  Tue, 29 May 2012 18:56:48 +0200
+
 php-pest (0.1-1) unstable; urgency=low
 
   * Initial Release.
