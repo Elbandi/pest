@@ -90,8 +90,8 @@ class Pest {
 
     $curl_opts = $this->curl_opts;
     $curl_opts[CURLOPT_CUSTOMREQUEST] = 'POST';
-    $headers[] = 'Content-Length: '.strlen($data);
-    $curl_opts[CURLOPT_HTTPHEADER] = $headers;
+    foreach($headers as $headerName => $value) $this->addHeader($headerName, $value);
+    $this->addHeader('Content-Length', strlen($data));
     $curl_opts[CURLOPT_POSTFIELDS] = $data;
 
     $curl = $this->prepRequest($curl_opts, $url);
@@ -107,8 +107,8 @@ class Pest {
 
     $curl_opts = $this->curl_opts;
     $curl_opts[CURLOPT_CUSTOMREQUEST] = 'PUT';
-    $headers[] = 'Content-Length: '.strlen($data);
-    $curl_opts[CURLOPT_HTTPHEADER] = $headers;
+    foreach($headers as $headerName => $value) $this->addHeader($headerName, $value);
+    $this->addHeader('Content-Length', strlen($data));
     $curl_opts[CURLOPT_POSTFIELDS] = $data;
 
     $curl = $this->prepRequest($curl_opts, $url);
@@ -124,8 +124,8 @@ class Pest {
 
     $curl_opts = $this->curl_opts;
     $curl_opts[CURLOPT_CUSTOMREQUEST] = 'PATCH';
-    $headers[] = 'Content-Length: '.strlen($data);
-    $curl_opts[CURLOPT_HTTPHEADER] = $headers;
+    foreach($headers as $headerName => $value) $this->addHeader($headerName, $value);
+    $this->addHeader('Content-Length', strlen($data));
     $curl_opts[CURLOPT_POSTFIELDS] = $data;
 
     $curl = $this->prepRequest($curl_opts, $url);
