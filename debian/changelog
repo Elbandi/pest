@@ -1,3 +1,16 @@
+php-pest (0.1-3) unstable; urgency=low
+
+  [ Andras Elso ]
+  * Add quilt to Build-Depends
+  * Fix: post/put/patch methods $headers parameters are added by
+    addHeader method
+  * Revert "Updated the addHeader() to use a try/catch block. The
+    is_array() line was crashing if CURLOPT_HTTPHEADER didn't exist.
+    Using the try/catch block fixed the error." This reverts commit
+    7043d54a1b01231e7162db63e6bb13f0d3b57feb.
+
+ -- Andras Elso <elso.andras@gmail.com>  Wed, 30 May 2012 12:41:28 +0200
+
 php-pest (0.1-2) unstable; urgency=low
 
   [ Omar Gonzalez ]
