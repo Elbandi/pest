@@ -44,9 +44,9 @@ class Pest {
   // Lets you add a header to the header list
   // Example: pest->addHeader("Accept", "application/xml");
   public function addHeader($headerName, $value) {
-      try {
+      if (is_array($this->curl_opts[CURLOPT_HTTPHEADER])) {
           array_push($this->curl_opts[CURLOPT_HTTPHEADER], $headerName.":".$value);
-      } catch (Exception $e) {
+      } else {
           $this->curl_opts[CURLOPT_HTTPHEADER] = array($headerName.":".$value);
       }
   }
