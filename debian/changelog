@@ -1,3 +1,19 @@
+php-pest (0.1-4) unstable; urgency=low
+
+  [ Gaëtan Frenoy ]
+  * Properly clean up XML errors in processBody After processing XML
+    errors, processBody does not properly clean the libxml error buffer.
+    This may cause unexpected errors if libxml is used later and or by
+    another application.
+
+  [ Maycon Bordin ]
+  * added support for multipart data parameters
+
+  [ Andras Elso ]
+  * Fix php warning
+
+ -- Andras Elso <elso.andras@gmail.com>  Mon, 07 Jan 2013 17:34:31 +0100
+
 php-pest (0.1-3) unstable; urgency=low
 
   [ Andras Elso ]
